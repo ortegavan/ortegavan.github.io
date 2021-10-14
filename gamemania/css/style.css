@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Urbanist:wght@500&display=swap');
+
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    padding: 12px 0 12px 0;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    background-color: #5ACFDA;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #70e2ed;
+}
+
+.turquesa {
+    color: #5ACFDA;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.margem-topo {
+    margin-top: 30px;
+}
+
+/* Topo */
+header {
+    height: 170px;
+}
+
+header div {
+    height: 66%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: "Urbanist", sans-serif;
+    font-size: 1.8rem;
+}
+
+.logo i, .contato i {
+    margin-right: 10px;
+}
+
+.minha-conta a:not(:last-child) {
+    margin-right: 20px;
+}
+
+.minha-conta a:hover {
+    color: #5ACFDA;
+}
+
+.contato i, .minha-conta i {
+    font-size: 1.6rem;
+}
+
+/* Menu */
+nav {
+    height: 34%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a:hover {
+    color: #5ACFDA;
+}
+
+nav a.atual:link, a.atual:visited {
+    color: #5ACFDA;
+    font-weight: bold;
+}
+
+/* Banner */
+.banner {
+    background-image: url(../img/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    height: 400px;
+}
+
+.banner-texto {
+    margin-bottom: 40px;
+    width: 32%;
+}
+
+.banner-texto a {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    width: 200px;
+}
+
+.banner-texto a:hover {
+    color: #F4FBFC;
+}
+
+/* Benefícios */
+.beneficios {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 148px;
+}
+
+.beneficios div {
+    display: flex;
+}
+
+.beneficios i {
+    font-size: 1.6rem;
+    margin-right: 10px;
+    color: #5ACFDA;
+    align-self: center;
+}
+
+.beneficios strong {
+    text-transform: uppercase;
+}
+
+/* Categorias */
+.categorias {
+    width: 100%;
+    height: 288px;
+    background-color: #F4FBFC;
+}
+
+.cards {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    width: 180px;
+    background-color: #fff;
+    border-radius: 6px;
+}
+
+.card i {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+}
+
+a.card:hover {
+    background-color: #F4FBFC;
+}
+
+/* Ofertas do dia */
+.ofertas {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.oferta {
+    position: relative;
+}
+
+.oferta img {
+    max-width: 588px;
+    border-radius: 6px;
+}
+
+.oferta p {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #fff;
+}
+ 
+a.oferta:hover {
+    filter: brightness(120%);
+}
+
+/* Produtos */
+.produtos {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.produtos p {
+    line-height: 1.6rem;
+}
+
+.produto img {
+    max-width: 384px;
+    border-radius: 6px;
+}
+
+.produto input {
+    text-align: center;
+}
+
+.produto a:hover {
+    color: #666;
+    filter: brightness(120%);
+}
+
+.produto-comprar {
+    margin-top: 12px;
+    text-align: center;
+}
+
+/* Newsletter */
+.newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4FBFC;
+    height: 237px;
+    font-size: 1.5rem;
+    gap: 10px;
+}
+
+.newsletter div {
+    display: flex;
+    align-items: center;
+}
+
+.newsletter i {
+    font-size: 3.1rem;
+    margin-right: 10px;
+}
+
+.newsletter input[type=text] {
+    width: 430px;
+    height: 50px;
+    font-size: 1rem;
+    border: solid 1px #5ACFDA;
+    border-radius: 6px 0 0 6px;
+    padding-left: 10px;
+    caret-color: #5ACFDA;
+}
+
+.newsletter input[type=text]:focus {
+    border: solid 2px #5ACFDA;
+}
+
+.newsletter button {
+    border-radius: 0 6px 6px 0;
+}
+
+/* Rodapé */
+footer a:hover {
+    text-decoration: underline;
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rodape div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.rodape-menu {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.rodape-menu a {
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+.direitos {
+    display: flex;
+    align-items: center;
+    height: 68px;
+    background-color: #5ACFDA;
+    color: #fff;
+    font-size: .8rem;
+    padding: 0 24px 0 24px;
+}
+
+.direitos a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+.direitos div {
+    width: 33.3%;
+}
+
+.redes-sociais {
+    text-align: center;
+}
+
+.formas-pagamento {
+    text-align: right;
+}
