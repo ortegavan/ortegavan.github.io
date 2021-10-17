@@ -88,6 +88,10 @@ header div {
     font-size: 1.6rem;
 }
 
+.minha-conta a:atual {
+    color: #5ACFDA;
+}
+
 /* Menu */
 nav {
     height: 34%;
@@ -431,9 +435,122 @@ footer a:hover {
 /* Compre também */
 .compre-tambem div {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .compre-tambem img {
-    width: 300px;
+    width: 260px;
+}
+
+/* Carrinho */
+.carrinho  {
+    display: flex;
+    gap: 50px;
+}
+
+.carrinho div:first-child {
+    flex-grow: 2;
+}
+
+.carrinho div:last-child {
+    flex-grow: 1;
+}
+
+.carrinho a {
+    color: #ababab;
+    font-size: 13px;
+}
+
+.carrinho img {
+    height: 150px;
+    width: 150px;
+    margin-right: 50px;
+}
+
+.carrinho div div {
+    display: flex;
+    position: relative;
+}
+
+.carrinho div div p:last-child{
+    position: absolute;
+    right: 0;
+}
+
+.promocao {
+    display: flex;
+    border-radius: 10px;
+    background-color: #F4FBFC;
+    padding: 24px;
+    align-self: flex-start;
+    align-items: center;
+}
+
+.promocao-off {
+    font-size: 60px;
+}
+
+.promocao div:last-child{
+    line-height: 26px;
+}
+
+.botao-secundario {
+    border: none;
+    color: #333;
+    background-color: #fff;
+    text-decoration: none;
+}
+
+.botao-secundario:hover{
+    text-decoration: underline;
+    background-color: #fff;
+}
+
+/* Busca e resultado da busca */
+.cabecalho-busca {
+    display: flex;
+}
+
+.cabecalho-busca div {
+    flex-grow: 1;
+}
+
+.cabecalho-busca div:last-child{
+    flex-grow: 2;
+    text-align: right;
+}
+
+.resultado-busca {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.resultado-busca div {
+    width: 274px;
+    height: 390px;
+    margin-bottom: 50px;
+    position: relative;
+    padding: 12px;
+}
+
+.resultado-busca img:hover {
+    filter: brightness(110%);
+}
+
+.resultado-busca div:hover {
+    text-decoration: underline;
+}
+
+.resultado-busca p {
+    position: absolute;
+    bottom: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #5ACFDA;
+}
+
+.resultado-busca img {
+    height: 250px;
+    width: 250px;
 }
