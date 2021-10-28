@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes do produto - Portal GameMania</title>
+    <title>Favoritos - Portal GameMania</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/favicon.svg" sizes="any" type="image/svg+xml">
     <script src="https://kit.fontawesome.com/225117dcca.js" crossorigin="anonymous"></script>
@@ -63,14 +63,34 @@
         </nav>
     </header>
     <section class="breadcrumbs">
+        <div class="container">
+            <a href="index.html">
+                <i class="fal fa-house"></i>
+            </a> / <span class="atual">
+                Favoritos
+            </span>
+        </div>
     </section>
-    <section class="detalhe-produto container margem-topo">
+    <section class="carrinho container margem-topo">
+        <div id="carrinho">
+        </div>
+        <div class="promocao">
+            <div>
+                <span class="promocao-off">
+                    15
+                </span>
+                <br>%<br>OFF
+            </div>
+            <div>
+                Use o código<br>
+                APROVEITE<br>
+                no checkout
+            </div>
+        </div>
     </section>
-    <section class="compre-tambem container">
-    </section>
-    <p class="margem-topo">
+    <div class="margem-topo">
         &nbsp;
-    </p>
+    </div>
     <footer class="margem-topo oculto-pp">
         <div class="rodape">
             <div>
@@ -149,7 +169,7 @@
         </div>
     </footer>
     <script>
-        carregarDetalhesProduto();
+        carregarFavoritos();
     </script>
 </body>
 </html>

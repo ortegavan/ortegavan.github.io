@@ -8,16 +8,19 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/favicon.svg" sizes="any" type="image/svg+xml">
     <script src="https://kit.fontawesome.com/225117dcca.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/produtos.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
     <header class="container">
         <div>
             <div class="logo">
                 <a href="index.html">
-                    <i class="far fa-gamepad-alt"></i>GameMania
+                    <i class="far fa-gamepad-alt"></i><span class="oculto-g">GameMania</span>
                 </a>
             </div>
-            <div class="contato">
+            <div class="contato oculto-g oculto-m oculto-p oculto-pp">
                 <i class="fal fa-phone-rotary icone-medio turquesa"></i>
                 <p>
                     <strong>
@@ -26,23 +29,37 @@
                     0800 111-2233
                 </p>
             </div>
-            <div class="minha-conta">
-                <a href="#" class="atual"><i class="fal fa-search"></i></a>
-                <a href="#"><i class="fal fa-user"></i></a>
-                <a href="#"><i class="fal fa-heart"></i></a>
-                <a href="#"><i class="fal fa-shopping-basket"></i></a>
+            <div class="minha-conta oculto-m oculto-p oculto-pp">
+                <a href="#" class="oculto-g" id="botao-busca"><i class="fal fa-search"></i></a>
+                <a href="logon.html" class="oculto-g"><i class="fal fa-user"></i></a>
+                <a href="favoritos.html"><i class="fal fa-heart"></i></a>
+                <a href="carrinho.html"><i class="fal fa-shopping-basket"></i></a>
+                <section class="busca sombra oculto-g oculto-gg" id="div-busca">
+                    Procuro por <input type="text" name="busca" id="busca"><button onclick="buscar();">ir</button>
+                </section>
+                <section class="favoritos-quantidade oculto-gg oculto-g">
+                    <span></span>
+                </section>
+                <section class="carrinho-quantidade oculto-gg oculto-g">
+                    <span></span>
+                </section>
+            </div>
+            <div class="menu-m oculto-gg oculto-g">
+                <a href="#">
+                    <i class="far fa-bars"></i>
+                </a>
             </div>
         </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="#">Lançamentos</a>
-            <a href="#">Destaques</a>
-            <a href="#">PC Gamer</a>
-            <a href="#">Eletrônicos</a>
-            <a href="#">Periféricos</a>
-            <a href="#">Jogos</a>
-            <a href="#">Colecionáveis</a>
-            <a href="#">Vale-presente</a>
+        <nav class="menu-g oculto-m oculto-p oculto-pp">
+            <a href="index.html" class="atual oculto-g">Home</a>
+            <a href="produtos.html?tipo=lancamentos" class="oculto-g">Lançamentos</a>
+            <a href="produtos.html?tipo=destaques" class="oculto-g">Destaques</a>
+            <a href="produtos.html?tipo=jogos">Jogos</a>
+            <a href="produtos.html?tipo=pcgamer">PC Gamer</a>
+            <a href="produtos.html?tipo=eletronicos">Eletrônicos</a>
+            <a href="produtos.html?tipo=perifericos">Periféricos</a>
+            <a href="produtos.html?tipo=colecionaveis" class="oculto-g">Colecionáveis</a>
+            <a href="valepresente.html">Vale-presente</a>
         </nav>
     </header>
     <section class="breadcrumbs">
@@ -54,132 +71,113 @@
             </a>
         </div>
     </section>
-   <section class="busca container margem-topo">
+   <section class="container margem-topo">
        <h2>
-           Estou procurando por <strong>razer pink</strong>
+           Estou procurando por 
+           <span class="termo-busca">
+           </span>
        </h2>
        <div class="cabecalho-busca margem-topo">
             <div>Filtrar por <i class="fal fa-chevron-down"></i></div>
             <div>Ordenar por <i class="fal fa-chevron-down"></i></div>
-            <div>Mostrando <strong>5</strong> itens</div>
+            <div>Mostrando 
+                    <span class="resultado-busca-total">
+                    </span>
+                produto(s)
+            </div>
        </div>
        <div class="resultado-busca margem-topo">
-            <div>
-                <a href="#">
-                    <img src="img/razer-teclado.jpg" alt="Teclado Razer quartz pink">
-                    Teclado Mecânico Gamer Razer BlackWidow V3, Chroma, Razer Switch Green, US, Quartz Pink
-                    <p>R$ 1.499,90</p>
-                </a>
-            </div>
-            <div>
-                <a href="#">
-                    <img src="img/razer-suporte.jpg" alt="Suporte para headset Razer quartz pink">
-                    Suporte para Headset Gamer Razer Station V2 Quartz Pink, Surround Sound 7.1, Chroma, 2 Portas USB 3.1
-                    <p>R$ 499,90</p>
-                </a>
-            </div>
-            <div>
-                <a href="#">
-                    <img src="img/razer-mouse.jpg" alt="Mouse Razer wireless quartz pink">
-                    Mouse Sem Fio Gamer Razer Viper Ultimate, Chroma, com Dock, Optical Switch, 8 Botões, 20000DPI, Quartz Pink
-                    <p>R$ 1.399,90</p>
-                </a>
-            </div>
-            <div>
-                <a href="#">
-                    <img src="img/razer-microfone.jpg" alt="Microfone Razer quartz pink">
-                    Microfone Razer Seiren Mini, USB, Quartz Pink
-                    <p>R$ 479,90</p>
-                </a>
-            </div>
-            <div>
-                <a href="#">
-                    <img src="img/razer-headset.jpg" alt="Headset Razer quartz pink">
-                    Headset Gamer Razer Kraken Kitty, Chroma, USB, Som Surround 7.1, Drivers 50mm, Quartz Pink
-                    <p>R$ 1.339,90</p>
-                </a>
-            </div>
        </div>
+       <div class="sem-produtos">
+        <i class="fad fa-alien-monster"></i>
+        <h2>Nenhum produto encontrado.</h2>
+        <p>
+            Faça uma nova busca ou clique <a href="index.html">aqui</a> para voltar à página inicial.
+        </p>
+    </div>
    </section>
    <div class="margem-topo">
        &nbsp;
    </div>
-    <footer class="container margem-topo">
-        <div class="rodape">
-            <div>
-                <h2>
-                    O que você procura?
-                </h2>
-                <a href="#">Consoles</a>
-                <a href="#">Notebooks</a>
-                <a href="#">Smartphones e tablets</a>
-                <a href="#">Áudio</a>
-                <a href="#">Smart home</a>
-                <a href="#">Drones</a>
-            </div>
-            <div>
-                <h2>
-                    Institucional
-                </h2>
-                <a href="#">Sobre a GameMania</a>
-                <a href="#">Missão e valores</a>
-                <a href="#">Políticas do site</a>
-                <a href="#">Políticas de privacidade</a>
-                <a href="#">Trabalhe conosco</a>
-            </div>
-            <div>
-                <h2>
-                    Informações adicionais
-                </h2>
-                <a href="#">Seja GameMania Pro!</a>
-                <a href="#">Cartão GameMania</a>
-                <a href="#">Horário de atendimento</a>
-                <a href="#">Canais de atendimento</a>
-                <a href="#">Cadastrar ou remover newsletter</a>
-            </div>
-            <div>
-                <h2>
-                    Fale conosco
-                </h2>
-                <p>
-                    Entre em contato!
-                </p>
-                <p>
-                    <i class="fal fa-map-marker-alt"></i> Rua 25 de Março, 1234
-                </p>
-                <p>
-                    <i class="fal fa-mobile-android-alt"></i> 0800 111-2233
-                </p>
-                <p>
-                    <a href="contato.html">Deixe sua mensagem</a>
-                </p>
-            </div>
+   <footer class="margem-topo oculto-pp">
+    <div class="rodape">
+        <div>
+            <h2>
+                O que você procura?
+            </h2>
+            <a href="produtos.html?tipo=consoles">Consoles</a>
+            <a href="produtos.html?tipo=notebooks">Notebooks</a>
+            <a href="produtos.html?tipo=smartphone">Smartphones e tablets</a>
+            <a href="produtos.html?tipo=audio">Áudio</a>
+            <a href="produtos.html?tipo=smarthome">Smart home</a>
+            <a href="produtos.html?tipo=drones">Drones</a>
         </div>
-        <div class="rodape-menu margem-topo">
-            <a href="#">Home</a>
-            <a href="#">Sobre</a>
-            <a href="#">Comprar</a>
-            <a href="#">Eletrônicos</a>
-            <a href="#">Blog</a>
-            <a href="#">Contato</a>
+        <div>
+            <h2>
+                Institucional
+            </h2>
+            <a href="missaovalores.html">Sobre a GameMania</a>
+            <a href="missaovalores.html">Missão e valores</a>
+            <a href="institucional.html">Políticas do site</a>
+            <a href="institucional.html">Políticas de privacidade</a>
+            <a href="institucional.html">Trabalhe conosco</a>
         </div>
-        <div class="direitos margem-topo">
-            <div>
-                Copyright © 2021 GameMania. All rights reserved
-            </div>
-            <div class="redes-sociais">
-                <a href="#"><i class="fab fa-facebook-square"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-youtube-square"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-            <div class="formas-pagamento">
-                <a href="#"><i class="fab fa-cc-visa"></i></a>
-                <a href="#"><i class="fab fa-cc-mastercard"></i></a>
-                <a href="#"><i class="fab fa-cc-paypal"></i></a>
-                <a href="#"><i class="fab fa-cc-apple-pay"></i></a>
-            </div>
+        <div class="oculto-g oculto-m oculto-p">
+            <h2>
+                Informações adicionais
+            </h2>
+            <a href="gamepro.html">Seja GameMania Pro!</a>
+            <a href="gamepro.html">Cartão GameMania</a>
+            <a href="institucional.html">Horário de atendimento</a>
+            <a href="institucional.html">Canais de atendimento</a>
+            <a href="institucional.html">Cadastrar ou remover newsletter</a>
         </div>
-    </footer>
+        <div>
+            <h2>
+                Fale conosco
+            </h2>
+            <p>
+                Entre em contato!
+            </p>
+            <p>
+                <i class="fal fa-map-marker-alt"></i> Rua 25 de Março, 1234
+            </p>
+            <p>
+                <i class="fal fa-mobile-android-alt"></i> 0800 111-2233
+            </p>
+            <p>
+                <a href="contato.html">Deixe sua mensagem</a>
+            </p>
+        </div>
+    </div>
+    <div class="rodape-menu margem-topo oculto-p">
+        <a href="index.html">Home</a>
+        <a href="institucional.html">Sobre</a>
+        <a href="carrinho.html">Comprar</a>
+        <a href="produtos.html?tipo=eletronicos">Eletrônicos</a>
+        <a href="institucional.html">Blog</a>
+        <a href="contato.html">Contato</a>
+    </div>
+    <div class="direitos margem-topo">
+        <div>
+            Copyright © 2021 GameMania. All rights reserved
+        </div>
+        <div class="redes-sociais">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube-square"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="formas-pagamento">
+            <a href="#"><i class="fab fa-cc-visa"></i></a>
+            <a href="#"><i class="fab fa-cc-mastercard"></i></a>
+            <a href="#"><i class="fab fa-cc-paypal"></i></a>
+            <a href="#"><i class="fab fa-cc-apple-pay"></i></a>
+        </div>
+    </div>
+</footer>
+<script>
+    renderizarBuscados();
+</script>
 </body>
 </html>

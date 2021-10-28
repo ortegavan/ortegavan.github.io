@@ -8,16 +8,19 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/favicon.svg" sizes="any" type="image/svg+xml">
     <script src="https://kit.fontawesome.com/225117dcca.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/produtos.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
     <header class="container">
         <div>
             <div class="logo">
                 <a href="index.html">
-                    <i class="far fa-gamepad-alt"></i>GameMania
+                    <i class="far fa-gamepad-alt"></i><span class="oculto-g">GameMania</span>
                 </a>
             </div>
-            <div class="contato">
+            <div class="contato oculto-g oculto-m oculto-p oculto-pp">
                 <i class="fal fa-phone-rotary icone-medio turquesa"></i>
                 <p>
                     <strong>
@@ -26,35 +29,57 @@
                     0800 111-2233
                 </p>
             </div>
-            <div class="minha-conta">
-                <a href="#"><i class="fal fa-search"></i></a>
-                <a href="#"><i class="fal fa-user"></i></a>
-                <a href="#"><i class="fal fa-heart"></i></a>
+            <div class="minha-conta oculto-m oculto-p oculto-pp">
+                <a href="#" class="oculto-g" id="botao-busca"><i class="fal fa-search"></i></a>
+                <a href="logon.html" class="oculto-g"><i class="fal fa-user"></i></a>
+                <a href="favoritos.html"><i class="fal fa-heart"></i></a>
                 <a href="carrinho.html"><i class="fal fa-shopping-basket"></i></a>
+                <section class="busca sombra oculto-g oculto-gg" id="div-busca">
+                    Procuro por <input type="text" name="busca" id="busca"><button onclick="buscar();">ir</button>
+                </section>
+                <section class="favoritos-quantidade oculto-gg oculto-g">
+                    <span></span>
+                </section>
+                <section class="carrinho-quantidade oculto-gg oculto-g">
+                    <span></span>
+                </section>
+            </div>
+            <div class="menu-m oculto-gg oculto-g">
+                <a href="#">
+                    <i class="far fa-bars"></i>
+                </a>
             </div>
         </div>
-        <nav>
-            <a href="index.html" class="atual">Home</a>
-            <a href="#">Lançamentos</a>
-            <a href="#">Destaques</a>
-            <a href="#">PC Gamer</a>
-            <a href="#">Eletrônicos</a>
-            <a href="#">Periféricos</a>
-            <a href="#">Jogos</a>
-            <a href="#">Colecionáveis</a>
-            <a href="#">Vale-presente</a>
+        <nav class="menu-g oculto-m oculto-p oculto-pp">
+            <a href="index.html" class="atual oculto-g">Home</a>
+            <a href="produtos.html?tipo=lancamentos" class="oculto-g">Lançamentos</a>
+            <a href="produtos.html?tipo=destaques" class="oculto-g">Destaques</a>
+            <a href="produtos.html?tipo=jogos">Jogos</a>
+            <a href="produtos.html?tipo=pcgamer">PC Gamer</a>
+            <a href="produtos.html?tipo=eletronicos">Eletrônicos</a>
+            <a href="produtos.html?tipo=perifericos">Periféricos</a>
+            <a href="produtos.html?tipo=colecionaveis" class="oculto-g">Colecionáveis</a>
+            <a href="valepresente.html">Vale-presente</a>
         </nav>
     </header>
     <section class="banner">
         <div class="container">
             <div class="banner-texto">
-                <a href="#">
+                <a href="gamepro.html">
                     Vire um GameMania Pro e ganhe 5% de desconto extra em todos os itens
+                </a>
+                <div class="oculto-gg margem-topo">
+                    <button>assinar</button>
+                </div>
+            </div>
+            <div class="banner-textinho oculto-gg oculto-g oculto-m">
+                <a href="gamepro.html">
+                    Vire Pro e ganhe 5% de desconto <i class="fas fa-arrow-circle-right"></i>
                 </a>
             </div>
         </div>
     </section>
-    <section class="beneficios container">
+    <section class="beneficios container oculto-p oculto-pp">
         <div>
             <i class="fal fa-rocket-launch"></i>
             <p>
@@ -73,7 +98,7 @@
                 em caso de problemas
             </p>
         </div>
-        <div>
+        <div class="oculto-g oculto-m">
             <i class="fal fa-credit-card"></i>
             <p>
                 <strong>
@@ -92,140 +117,58 @@
             </p>
         </div>
     </section>
-    <section class="categorias">
+    <section class="categorias oculto-p oculto-pp">
         <div class="container">
             <h2>Categorias</h2>
             <div class="cards">
-                <a href="#" class="card">
+                <a href="produtos.html?tipo=consoles" class="card">
                     <i class="fal fa-game-console-handheld"></i>
                     <p>Consoles</p>
                 </a>
-                <a href="#" class="card">
+                <a href="produtos.html?tipo=notebooks" class="card">
                     <i class="fal fa-laptop"></i>
                     <p>Notebooks</p>
                 </a> 
-                <a href="#" class="card">
+                <a href="produtos.html?tipo=smartphones" class="card">
                     <i class="fal fa-mobile-android-alt"></i>
                     <p>Smartphones</p>
                 </a> 
-                <a href="produto.html" class="card">
+                <a href="produtos.html?tipo=audio" class="card">
                     <i class="fal fa-microphone"></i>
                     <p>Áudio</p>
                 </a> 
-                <a href="#" class="card">
+                <a href="produtos.html?tipo=smarthome" class="card oculto-g oculto-m">
                     <i class="fal fa-lightbulb-on"></i>
                     <p>Smart home</p>
                 </a> 
-                <a href="#" class="card">
+                <a href="produtos.html?tipo=drones" class="card oculto-g oculto-m">
                     <i class="fal fa-ufo-beam"></i>
                     <p>Drones</p>
                 </a>
             </div>
         </div>
     </section>
-    <section class="container margem-topo">
+    <section class="container margem-topo oculto-p oculto-pp">
         <h2>Ofertas do dia</h2>
         <div class="ofertas">
-            <a href="#" class="oferta">
+            <a href="produtos.html?tipo=controles" class="oferta">
                 <img src="img/oferta1.jpg" alt="oferta 1">
                 <p>Todos os controles com 10% off</p>
             </a>
-            <a href="#" class="oferta">
+            <a href="produtos.html?tipo=audio" class="oferta">
                 <img src="img/oferta2.jpg" alt="oferta 2">
                 <p>Os melhores fones em 10x sem juros</p>
             </a>
         </div>
     </section>
+    <section class="busca-mobile oculto-gg oculto-g oculto-m oculto-p">
+        <input type="text" name="busca" id="busca" placeholder="O que você procura?"><button><i class="fas fa-arrow-circle-right"></i></button>
+    </section>
     <section class="container margem-topo">
         <h2>Produtos em destaque</h2>
-        <div class="produtos">
-            <div class="produto">
-                <a href="#">
-                    <img src="img/playstation.jpg" alt="Playstation">
-                    <p>
-                        Console Playstation 4 Special Edition<br>
-                        <strong>
-                            R$ 3000<br>
-                        </strong>
-                    </p>
-                </a>
-                <div class="produto-comprar">
-                    <button>comprar</button>
-                </div>
-            </div>
-            <div class="produto">
-                <a href="#">
-                    <img src="img/mouse-razer.jpg" alt="Mouse Razer">
-                    <p>
-                        Mouse gamer Razer sem fio<br>
-                        <strong>
-                            R$ 1300<br>
-                        </strong>
-                    </p>
-                </a>
-                <div class="produto-comprar">
-                    <button>comprar</button>
-                </div>
-            </div>
-            <div class="produto">
-                <a href="#">
-                    <img src="img/fone-beats.jpg" alt="Fone Beats">
-                    <p>
-                        Fones de ouvido Powerbeats Pro<br>
-                        <strong>
-                            R$ 2200<br>
-                        </strong>
-                    </p>
-                </a>
-                <div class="produto-comprar">
-                    <button>comprar</button>
-                </div>
-            </div>
-            <div class="produto">
-                <a href="#">
-                    <img src="img/iphone.jpg" alt="iPhone">
-                    <p>
-                        iPhone 12<br>
-                        <strong>
-                            R$ 7000<br>
-                        </strong>
-                    </p>
-                </a>
-                <div class="produto-comprar">
-                    <button>comprar</button>
-                </div>
-            </div>
-            <div class="produto">
-                <a href="#">
-                    <img src="img/geforce.jpg" alt="Placa de vídeo GeForce">
-                    <p>
-                        Placa de vídeo NVIDIA GeForce RTX 2060<br>
-                        <strong>
-                            R$ 3700<br>
-                        </strong>
-                    </p>
-                </a>
-                <div class="produto-comprar">
-                    <button>comprar</button>
-                </div>
-            </div>
-            <div class="produto">
-                <a href="#">
-                    <img src="img/cogumelo-mario.jpg" alt="Cogumelo do Mario">
-                    <p>
-                        Cogumelo do Mario colecionável<br>
-                        <strong>
-                            R$ 50<br>
-                        </strong>
-                    </p>
-                </a>
-                <div class="produto-comprar">
-                    <button>comprar</button>
-                </div>
-            </div>
-        </div>
+        <div class="produtos" id="produtos"></div>
     </section>
-    <section class="newsletter margem-topo">
+    <section class="newsletter margem-topo oculto-m oculto-p oculto-pp">
         <div>
             <i class="fal fa-mail-bulk turquesa"></i>
             <p>
@@ -235,42 +178,75 @@
             </p>
         </div>
         <div>
-            <input type="text" name="newsletter" id="newsletter" placeholder="seu e-mail">
+            <input type="email" name="newsletter" id="newsletter" placeholder="seu e-mail">
             <button>enviar</button>
         </div>
     </section>
-    <footer class="container margem-topo">
+    <section class="menu-mobile oculto-gg oculto-g oculto-m oculto-p">
+        <a href="index.html">
+            <i class="fas fa-home"></i>
+        </a>
+        <a href="#">
+            <i class="fas fa-search"></i>
+        </a>
+        <a href="#">
+            <i class="fas fa-user"></i>
+        </a>
+        <a href="#">
+            <i class="fas fa-heart"></i>
+        </a>
+        <a href="#">
+            <i class="fas fa-shopping-basket"></i>
+        </a>
+    </section>
+    <section class="cookies sombra">
+        <p>
+            <i class="fal fa-cookie-bite"></i>
+        </p>
+        <p>
+            <strong>Sua privacidade</strong>
+        </p>
+        <p>
+            Clicando em "Aceitar todos os cookies" você concorda que o GameMania pode armazenar cookies no seu dispositivo de acordo com nossa <a href="institucional.html">Política de Privacidade</a>.
+        </p>
+        <p>
+            <button id="botao-cookies">
+                Aceitar todos os cookies
+            </button>
+        </p>
+    </section>
+    <footer class="margem-topo oculto-pp">
         <div class="rodape">
             <div>
                 <h2>
                     O que você procura?
                 </h2>
-                <a href="#">Consoles</a>
-                <a href="#">Notebooks</a>
-                <a href="#">Smartphones e tablets</a>
-                <a href="#">Áudio</a>
-                <a href="#">Smart home</a>
-                <a href="#">Drones</a>
+                <a href="produtos.html?tipo=consoles">Consoles</a>
+                <a href="produtos.html?tipo=notebooks">Notebooks</a>
+                <a href="produtos.html?tipo=smartphone">Smartphones e tablets</a>
+                <a href="produtos.html?tipo=audio">Áudio</a>
+                <a href="produtos.html?tipo=smarthome">Smart home</a>
+                <a href="produtos.html?tipo=drones">Drones</a>
             </div>
             <div>
                 <h2>
                     Institucional
                 </h2>
-                <a href="#">Sobre a GameMania</a>
-                <a href="#">Missão e valores</a>
-                <a href="#">Políticas do site</a>
-                <a href="#">Políticas de privacidade</a>
-                <a href="#">Trabalhe conosco</a>
+                <a href="missaovalores.html">Sobre a GameMania</a>
+                <a href="missaovalores.html">Missão e valores</a>
+                <a href="institucional.html">Políticas do site</a>
+                <a href="institucional.html">Políticas de privacidade</a>
+                <a href="institucional.html">Trabalhe conosco</a>
             </div>
-            <div>
+            <div class="oculto-g oculto-m oculto-p">
                 <h2>
                     Informações adicionais
                 </h2>
-                <a href="#">Seja GameMania Pro!</a>
-                <a href="#">Cartão GameMania</a>
-                <a href="#">Horário de atendimento</a>
-                <a href="#">Canais de atendimento</a>
-                <a href="#">Cadastrar ou remover newsletter</a>
+                <a href="gamepro.html">Seja GameMania Pro!</a>
+                <a href="gamepro.html">Cartão GameMania</a>
+                <a href="institucional.html">Horário de atendimento</a>
+                <a href="institucional.html">Canais de atendimento</a>
+                <a href="institucional.html">Cadastrar ou remover newsletter</a>
             </div>
             <div>
                 <h2>
@@ -290,13 +266,13 @@
                 </p>
             </div>
         </div>
-        <div class="rodape-menu margem-topo">
-            <a href="#">Home</a>
-            <a href="#">Sobre</a>
-            <a href="#">Comprar</a>
-            <a href="#">Eletrônicos</a>
-            <a href="#">Blog</a>
-            <a href="#">Contato</a>
+        <div class="rodape-menu margem-topo oculto-p">
+            <a href="index.html">Home</a>
+            <a href="institucional.html">Sobre</a>
+            <a href="carrinho.html">Comprar</a>
+            <a href="produtos.html?tipo=eletronicos">Eletrônicos</a>
+            <a href="institucional.html">Blog</a>
+            <a href="contato.html">Contato</a>
         </div>
         <div class="direitos margem-topo">
             <div>
@@ -316,5 +292,9 @@
             </div>
         </div>
     </footer>
+    <script>
+        carregarProdutosHome();
+        exibirCookies();
+    </script>
 </body>
 </html>
