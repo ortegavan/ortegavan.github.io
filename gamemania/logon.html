@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha conta - Portal GameMania</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.svg" sizes="any" type="image/svg+xml">
+    <script src="https://kit.fontawesome.com/225117dcca.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/produtos.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <header class="container">
+        <div>
+            <div class="logo">
+                <a href="index.html">
+                    <i class="far fa-gamepad-alt"></i><span class="oculto-g">GameMania</span>
+                </a>
+            </div>
+            <div class="contato oculto-g oculto-m oculto-p oculto-pp">
+                <i class="fal fa-phone-rotary icone-medio turquesa"></i>
+                <p>
+                    <strong>
+                        Entre em contato: <br>
+                    </strong>
+                    0800 111-2233
+                </p>
+            </div>
+            <div class="minha-conta oculto-m oculto-p oculto-pp">
+                <a href="#" class="oculto-g" id="botao-busca"><i class="fal fa-search"></i></a>
+                <a href="logon.html" class="oculto-g"><i class="fal fa-user"></i></a>
+                <a href="favoritos.html"><i class="fal fa-heart"></i></a>
+                <a href="carrinho.html"><i class="fal fa-shopping-basket"></i></a>
+                <section class="busca sombra oculto-g oculto-gg" id="div-busca">
+                    Procuro por <input type="text" name="busca" id="busca"><button onclick="buscar();">ir</button>
+                </section>
+                <section class="favoritos-quantidade oculto-gg oculto-g">
+                    <span></span>
+                </section>
+                <section class="carrinho-quantidade oculto-gg oculto-g">
+                    <span></span>
+                </section>
+            </div>
+            <div class="menu-m oculto-gg oculto-g">
+                <a href="#">
+                    <i class="far fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <nav class="menu-g oculto-m oculto-p oculto-pp">
+            <a href="index.html" class="atual oculto-g">Home</a>
+            <a href="produtos.html?tipo=lancamentos" class="oculto-g">Lançamentos</a>
+            <a href="produtos.html?tipo=destaques" class="oculto-g">Destaques</a>
+            <a href="produtos.html?tipo=jogos">Jogos</a>
+            <a href="produtos.html?tipo=pcgamer">PC Gamer</a>
+            <a href="produtos.html?tipo=eletronicos">Eletrônicos</a>
+            <a href="produtos.html?tipo=perifericos">Periféricos</a>
+            <a href="produtos.html?tipo=colecionaveis" class="oculto-g">Colecionáveis</a>
+            <a href="valepresente.html">Vale-presente</a>
+        </nav>
+    </header>
+    <section class="breadcrumbs">
+        <div class="container">
+            <a href="index.html">
+                <i class="fal fa-house"></i>
+            </a> / <span class="atual">
+                Minha conta
+            </span>
+        </div>
+    </section>
+    <section class="busca-mobile oculto-gg oculto-g oculto-m oculto-p">
+        <input type="text" name="busca" id="busca" placeholder="O que você procura?"><button><i
+                class="fas fa-arrow-circle-right"></i></button>
+    </section>
+    <section class="cadastro container margem-topo">
+        <div>
+            <h2>Já tenho uma conta!</h2>
+            <p class="margem-topo">
+                <label for="email">E-mail</label><br>
+                <input type="email" id="email" />
+            </p>
+            <p class="margem-topo">
+                <label for="senha">Senha</label><br>
+                <input type="password" id="senha" />
+            </p>
+            <div class="margem-topo cadastro-lembrar">
+                <div>
+                    <label class="check-titulo">
+                        Manter-me conectado
+                        <input type="checkbox">
+                        <span class="check-controle"></span>
+                    </label>
+                </div>
+                <div>
+                    <a href="#">Esqueci minha senha</a>
+                </div>
+            </div>
+            <button class="margem-topo">Entrar</button>
+        </div>
+        <div>
+            <h2>Quero me cadastrar</h2>
+            <p class="margem-topo">
+                <label for="nome">Nome completo</label><br>
+                <input type="text" id="nome" />
+            </p>
+            <p class="margem-topo">
+                <label for="email2">E-mail</label><br>
+                <input type="email" id="email2" />
+            </p>
+            <button class="margem-topo">Cadastrar</button>
+        </div>
+    </section>
+    <section class="menu-mobile oculto-gg oculto-g oculto-m oculto-p">
+        <a href="index.html">
+            <i class="fas fa-home"></i>
+        </a>
+        <a href="#">
+            <i class="fas fa-search"></i>
+        </a>
+        <a href="#">
+            <i class="fas fa-user"></i>
+        </a>
+        <a href="#">
+            <i class="fas fa-heart"></i>
+        </a>
+        <a href="#">
+            <i class="fas fa-shopping-basket"></i>
+        </a>
+    </section>
+    <footer class="margem-topo oculto-pp">
+        <div class="rodape">
+            <div>
+                <h2>
+                    O que você procura?
+                </h2>
+                <a href="produtos.html?tipo=consoles">Consoles</a>
+                <a href="produtos.html?tipo=notebooks">Notebooks</a>
+                <a href="produtos.html?tipo=smartphone">Smartphones e tablets</a>
+                <a href="produtos.html?tipo=audio">Áudio</a>
+                <a href="produtos.html?tipo=smarthome">Smart home</a>
+                <a href="produtos.html?tipo=drones">Drones</a>
+            </div>
+            <div>
+                <h2>
+                    Institucional
+                </h2>
+                <a href="missaovalores.html">Sobre a GameMania</a>
+                <a href="missaovalores.html">Missão e valores</a>
+                <a href="institucional.html">Políticas do site</a>
+                <a href="institucional.html">Políticas de privacidade</a>
+                <a href="institucional.html">Trabalhe conosco</a>
+            </div>
+            <div class="oculto-g oculto-m oculto-p">
+                <h2>
+                    Informações adicionais
+                </h2>
+                <a href="gamepro.html">Seja GameMania Pro!</a>
+                <a href="gamepro.html">Cartão GameMania</a>
+                <a href="institucional.html">Horário de atendimento</a>
+                <a href="institucional.html">Canais de atendimento</a>
+                <a href="institucional.html">Cadastrar ou remover newsletter</a>
+            </div>
+            <div>
+                <h2>
+                    Fale conosco
+                </h2>
+                <p>
+                    Entre em contato!
+                </p>
+                <p>
+                    <i class="fal fa-map-marker-alt"></i> Rua 25 de Março, 1234
+                </p>
+                <p>
+                    <i class="fal fa-mobile-android-alt"></i> 0800 111-2233
+                </p>
+                <p>
+                    <a href="contato.html">Deixe sua mensagem</a>
+                </p>
+            </div>
+        </div>
+        <div class="rodape-menu margem-topo oculto-p">
+            <a href="index.html">Home</a>
+            <a href="institucional.html">Sobre</a>
+            <a href="carrinho.html">Comprar</a>
+            <a href="produtos.html?tipo=eletronicos">Eletrônicos</a>
+            <a href="institucional.html">Blog</a>
+            <a href="contato.html">Contato</a>
+        </div>
+        <div class="direitos margem-topo">
+            <div>
+                Copyright © 2021 GameMania. All rights reserved
+            </div>
+            <div class="redes-sociais">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube-square"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="formas-pagamento">
+                <a href="#"><i class="fab fa-cc-visa"></i></a>
+                <a href="#"><i class="fab fa-cc-mastercard"></i></a>
+                <a href="#"><i class="fab fa-cc-paypal"></i></a>
+                <a href="#"><i class="fab fa-cc-apple-pay"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

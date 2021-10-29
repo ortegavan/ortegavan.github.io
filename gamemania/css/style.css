@@ -526,6 +526,95 @@ footer a:hover {
     color: #333;
 }
 
+/* Sign in e sign up */
+.cadastro {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.cadastro a:hover {
+    text-decoration: underline;
+}
+
+.cadastro input[type=text], input[type=password], input[type=email] {
+    width: 500px;
+    height: 50px;
+    font-size: 1rem;
+    border: solid 1px #5ACFDA;
+    border-radius: 6px;
+    padding-left: 10px;
+    margin-top: 10px;
+    caret-color: #5ACFDA;
+}
+
+.cadastro input:focus {
+    border: solid 2px #5ACFDA;
+}
+
+.cadastro-lembrar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+/* Checkbox da opção de se manter conectado para o sign in */
+.check-titulo {
+    display: block;
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.check-titulo input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    cursor: pointer;
+}
+
+.check-controle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: solid 1px #5ACFDA;
+    border-radius: 3px;;
+}
+
+.check-titulo:hover input~.check-controle {
+    background-color: #f4f4f4;
+}
+
+.check-titulo input:checked~.check-controle {
+    border: solid 1px #5ACFDA;
+    background-color: #5ACFDA;
+}
+
+.check-controle:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.check-titulo input:checked~.check-controle:after {
+    display: block;
+}
+
+.check-titulo .check-controle:after {
+    left: 4px;
+    top: 0px;
+    width: 6px;
+    height: 13px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
 /* Fale conosco */
 .falecom {
     display: flex;
