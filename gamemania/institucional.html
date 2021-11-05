@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Institucional - Portal GameMania</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="icon" href="img/favicon.svg" sizes="any" type="image/svg+xml">
     <script src="https://kit.fontawesome.com/225117dcca.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/produtos.js"></script>
     <script src="js/main.js"></script>
+    <style>
+        @media screen and (min-width: 448px) and (max-width: 991.98px) {
+            body {
+                background-image: unset;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="container">
@@ -45,8 +53,13 @@
                 </section>
             </div>
             <div class="menu-m oculto-gg oculto-g">
-                <a href="#">
+                <a onclick="exibirMenuResponsivo();">
                     <i class="far fa-bars"></i>
+                </a>
+            </div>
+            <div class="oculto-m oculto-gg oculto-g oculto-m oculto-p oculto-pp menu-responsivo-fechar">
+                <a onclick="ocultarMenuResponsivo();">
+                    <i class="far fa-times"></i>
                 </a>
             </div>
         </div>
@@ -62,7 +75,7 @@
             <a href="valepresente.html">Vale-presente</a>
         </nav>
     </header>
-    <section class="breadcrumbs">
+    <section class="breadcrumbs oculto-pp">
         <div class="container">
             <a href="index.html">
                 <i class="fal fa-house"></i>
@@ -70,9 +83,6 @@
                 Institucional
             </span>
         </div>
-    </section>
-    <section class="busca-mobile oculto-gg oculto-g oculto-m oculto-p">
-        <input type="text" name="busca" id="busca" placeholder="O que você procura?"><button><i class="fas fa-arrow-circle-right"></i></button>
     </section>
     <section class="container margem-topo">
         <div class="generico">
@@ -87,16 +97,13 @@
         <a href="index.html">
             <i class="fas fa-home"></i>
         </a>
-        <a href="#">
-            <i class="fas fa-search"></i>
-        </a>
-        <a href="#">
+        <a href="logon.html">
             <i class="fas fa-user"></i>
         </a>
-        <a href="#">
+        <a href="favoritos.html">
             <i class="fas fa-heart"></i>
         </a>
-        <a href="#">
+        <a href="carrinho.html">
             <i class="fas fa-shopping-basket"></i>
         </a>
     </section>

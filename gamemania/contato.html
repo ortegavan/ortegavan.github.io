@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fale conosco - Portal GameMania</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="icon" href="img/favicon.svg" sizes="any" type="image/svg+xml">
     <script src="https://kit.fontawesome.com/225117dcca.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/produtos.js"></script>
     <script src="js/main.js"></script>
+    <style>
+        @media screen and (min-width: 448px) and (max-width: 991.98px) {
+            body {
+                background-image: unset;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="container">
@@ -45,8 +53,13 @@
                 </section>
             </div>
             <div class="menu-m oculto-gg oculto-g">
-                <a href="#">
+                <a onclick="exibirMenuResponsivo();">
                     <i class="far fa-bars"></i>
+                </a>
+            </div>
+            <div class="oculto-m oculto-gg oculto-g oculto-m oculto-p oculto-pp menu-responsivo-fechar">
+                <a onclick="ocultarMenuResponsivo();">
+                    <i class="far fa-times"></i>
                 </a>
             </div>
         </div>
@@ -62,7 +75,7 @@
             <a href="valepresente.html">Vale-presente</a>
         </nav>
     </header>
-    <section class="breadcrumbs">
+    <section class="breadcrumbs oculto-pp">
         <div class="container">
             <a href="index.html">
                 <i class="fal fa-house"></i>
@@ -98,11 +111,25 @@
             </p>
             <button class="margem-topo">enviar</button>
         </div>
-        <div>
+        <div class="oculto-g oculto-m oculto-p oculto-pp">
             <i class="fab fa-whatsapp"></i>
             <h2>Procurando por suporte?</h2>
             Entre em contato via WhatsApp: 0800 111-2233
         </div>
+    </section>
+    <section class="menu-mobile oculto-gg oculto-g oculto-m oculto-p">
+        <a href="index.html">
+            <i class="fas fa-home"></i>
+        </a>
+        <a href="logon.html">
+            <i class="fas fa-user"></i>
+        </a>
+        <a href="favoritos.html">
+            <i class="fas fa-heart"></i>
+        </a>
+        <a href="carrinho.html">
+            <i class="fas fa-shopping-basket"></i>
+        </a>
     </section>
     <footer class="margem-topo oculto-pp">
         <div class="rodape">

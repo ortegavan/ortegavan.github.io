@@ -207,6 +207,35 @@ nav a.atual:link, a.atual:visited {
     font-weight: bold;
 }
 
+/* Menu responsivo */
+.menu-responsivo {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 100vh;
+    width: 80%;
+    background-color: rgba(255, 255, 255, .8);
+    backdrop-filter: blur(6px);
+    font-size: 1rem;
+    padding: 40px;
+}
+
+.menu-responsivo-fechar {
+    position: absolute;
+    top: 0;
+    right: 16px;
+    z-index: 3;
+}
+
+.menu-responsivo-fechar i {
+    font-size: 1.4rem;
+}
+
 /* Banner */
 .banner-texto {
     margin-bottom: 40px;
@@ -544,7 +573,6 @@ footer a:hover {
     border: solid 1px #5ACFDA;
     border-radius: 6px;
     padding-left: 10px;
-    margin-top: 10px;
     caret-color: #5ACFDA;
 }
 
@@ -606,10 +634,10 @@ footer a:hover {
 }
 
 .check-titulo .check-controle:after {
-    left: 4px;
-    top: 0px;
-    width: 6px;
-    height: 13px;
+    left: 6px;
+    top: 1.4px;
+    width: 4px;
+    height: 10px;
     border: solid #fff;
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
@@ -668,17 +696,17 @@ footer a:hover {
 .detalhe-produto img {
     object-fit: cover;
     object-position: center;
-    height: 560px;
-    width: 560px;
+    height: 480px;
+    width: 480px;
     border-radius: 8px;
 }
 
 .botao-sacola {
-    width: 450px;
+    width: 78%;
 }
 
 .botao-favorito {
-    width: 70px;
+    width: 18%;
     border: solid 1.6px #333;
     color: #333;
     background-color: #fff;
@@ -701,7 +729,7 @@ footer a:hover {
 }
 
 /* Carrinho */
-.carrinho  {
+.carrinho {
     display: flex;
     gap: 50px;
 }
@@ -727,6 +755,11 @@ footer a:hover {
     width: 150px;
     margin-right: 50px;
     border-radius: 6px;
+}
+
+.carrinho button {
+    width: 200px;
+    padding: 0 12px 0 12px;
 }
 
 .carrinho div div {
@@ -836,463 +869,4 @@ a.carrinho-voltar:hover {
 
 .resultado-busca-total, .termo-busca {
     font-weight: bold;
-}
-
-/* Ajustes responsivos */
-/* Tela pequenininha */
-@media screen and (max-width: 447.98px) {
-    .oculto-pp {
-        display: none !important;
-    }
-
-    .margem-topo {
-        margin-top: 0;
-    }
-
-    body {
-        font-size: 12px;
-        background-image: url(../img/banner-320.jpg);
-        background-repeat: no-repeat;
-    }
-
-    h2 {
-        font-size: 1.1rem;
-    }
-
-    .container {
-        width: 100%;
-        padding: 0 12px 0 12px;
-    }
-
-    header {
-        height: 120px;
-        position: relative;
-    }
-
-    button {
-        width: 130px;
-        height: 38px;
-        font-size: .8rem;
-    }
-
-    .logo i, .logo span, .menu-m i {
-        font-size: 1.4rem;
-        color: #fff;
-    }
-
-    .banner {
-        background-image: none;
-        display: inline;
-    }
-
-    .banner-texto {
-        display: none !important;
-    }
-
-    .banner-textinho {
-        height: 70px;
-        width: 60%;
-    }
-
-    .banner-textinho a {
-        color: #fff;
-        font-weight: bold;
-        font-size: 1rem;
-        line-height: 1.8rem;
-    }
-
-    .produtos {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: start !important;
-        gap: 12px;
-        margin-bottom: 72px;
-    }
-    
-    .produtos p {
-        line-height: 1.1rem;
-    }
-
-    .produto {
-        display: inline;
-        width: 100%;
-    }
-
-    .produto a {
-        display: flex;
-        gap: 12px;
-    }
-    
-    .produto img {
-        object-fit: cover;
-        object-position: center;
-        height: 100px;
-        width: 100px;
-        border-radius: 6px;
-    }
-    
-    .produto a:hover {
-        color: #666;
-        filter: brightness(105%);
-    }
-
-    .produto-comprar {
-        display: none !important;
-    }
-
-    .menu-mobile {
-        height: 60px;
-        width: 100%;
-        background-color: #5ACFDA;
-        font-size: 1.4rem;
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 12px;
-    }
-
-    .menu-mobile i {
-        color: #fff;
-    }
-
-    .busca-mobile {
-        padding: 12px;
-        margin-top: 12px;
-    }
-
-    .busca-mobile input[type=text] {
-        width: 70%;
-        height: 38px;
-        font-size: .8rem;
-        border: solid 1px #5ACFDA;
-        border-radius: 6px 0 0 6px;
-        padding-left: 10px;
-        caret-color: #5ACFDA;
-    }
-    
-    .busca-mobile input[type=text]:focus {
-        border: solid 2px #5ACFDA;
-    }
-    
-    .busca-mobile button {
-        width: 50px;
-        font-size: .8rem;
-        border-radius: 0 6px 6px 0;
-    }
-
-    .cookies {
-        height: 300px;
-        width: 93%;
-        left: 12px;
-        bottom: 12px;
-        padding: 12px;
-    }
-}
-
-/* Tela pequena */
-@media screen and (min-width: 448px) and (max-width: 575.98px){
-    .oculto-p {
-        display: none !important;
-    }
-
-    .margem-topo {
-        margin-top: 12px;
-    }
-
-    body {
-        font-size: 12px;
-        background-image: url(../img/banner-576.jpg);
-        background-repeat: no-repeat;
-    }
-
-    h2 {
-        font-size: 1.1rem;
-    }
-
-    .container {
-        width: 100%;
-        padding: 0 20px 0 20px;
-    }
-
-    header {
-        height: 150px;
-        position: relative;
-    }
-
-    button {
-        width: 130px;
-        height: 38px;
-        font-size: .8rem;
-    }
-
-    .menu-m {
-        font-size: 1.4rem;
-    }
-
-    .logo i, .logo span, .menu-m i {
-        color: #fff;
-    }
-
-    .banner {
-        background-image: none;
-        display: inline;
-    }
-
-    .banner-texto {
-        display: none !important;
-    }
-
-    .banner-textinho {
-        height: 100px;
-        width: 50%;
-    }
-
-    .banner-textinho a {
-        color: #fff;
-        font-weight: bold;
-        font-size: 1rem;
-        line-height: 1.8rem;
-    }
-
-    .produtos p {
-        line-height: 1.1rem;
-    }
-
-    .produto {
-        width: 28%;
-        min-width: 120px;
-    }
-
-    .produto img {
-        height: 82px;
-    }
-
-    .direitos {
-        font-size: .7rem;
-    }
-
-    .redes-sociais i, .formas-pagamento i {
-        font-size: 1.1rem;
-    }
-
-    .cookies {
-        height: 300px;
-        width: 300px;
-    }
-}
-
-/* Tela média */
-@media screen and (min-width: 576px) and (max-width: 767.98px) {
-    .oculto-m {
-        display: none !important;
-    }
-
-    .margem-topo {
-        margin-top: 12px;
-    }
-
-    body {
-        font-size: 13px;
-        background-image: url(../img/banner-768.jpg);
-        background-repeat: no-repeat;
-    }
-
-    h2 {
-        font-size: 1.1rem;
-    }
-
-    .container {
-        width: 100%;
-        padding: 0 20px 0 20px;
-    }
-
-    header {
-        height: 120px;
-        position: relative;
-    }
-
-    button {
-        width: 130px;
-        height: 38px;
-        font-size: .8rem;
-    }
-
-    .menu-m {
-        font-size: 1.4rem;
-    }
-
-    .logo i, .logo span, .menu-m i, .beneficios, .beneficios i {
-        color: #fff;
-    }
-
-    .banner {
-        background-image: none;
-        display: inline;
-    }
-
-    .banner-texto {
-        width: 48%;
-    }
-
-    .banner-texto a {
-        font-size: 1.2rem;
-        line-height: 2rem;
-    }
-
-    .beneficios {
-        font-size: .7rem;
-    }
-
-    .categorias {
-        height: 180px;
-    }
-
-    .card {
-        height: 120px;
-    }
-
-    .ofertas {
-        gap: 12px;
-    }
-
-    .oferta p {
-        font-size: 1.1rem;
-    }
-
-    .produto {
-        width: 30%;
-    }
-
-    .produto img {
-        height: 120px;
-    }
-
-    .direitos {
-        font-size: .7rem;
-    }
-
-    .redes-sociais i, .formas-pagamento i {
-        font-size: 1.1rem;
-    }
-
-    .cookies {
-        height: 330px;
-        width: 330px;
-    }
-}
-
-/* Tela grande */
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-    .oculto-g {
-        display: none !important;
-    }
-   
-    .margem-topo {
-        margin-top: 12px;
-    }
-
-    body {
-        font-size: 14px;
-        background-image: url(../img/banner-992.jpg);
-        background-repeat: no-repeat;
-    }
-
-    h2 {
-        font-size: 1.1rem;
-    }
-
-    .container {
-        width: 100%;
-        padding: 0 40px 0 40px;
-    }
-
-    header {
-        position: relative;
-    }
-
-    button {
-        width: 130px;
-        height: 38px;
-        font-size: .8rem;
-    }
-
-    .menu-g {
-        width: 60%;
-        position: absolute;
-        top: 30px;
-        left: 20%;
-    }
-
-    .menu-g a, .logo i, .minha-conta i, .beneficios, .beneficios i {
-        color: #fff;
-    }
-
-    .banner {
-        background-image: none;
-        display: inline;
-    }
-
-    .banner-texto {
-        width: 40%;
-    }
-
-    .banner-texto a {
-        font-size: 1.2rem;
-        line-height: 2rem;
-    }
-
-    .beneficios {
-        font-size: .7rem;
-    }
-
-    .ofertas {
-        gap: 12px;
-    }
-
-    .oferta p {
-        font-size: 1.1rem;
-    }
-
-    .produto img {
-        height: 150px;
-    }
-
-    .newsletter {
-        height: 130px;
-        font-size: 1.1rem;
-    }
-
-    .newsletter i {
-        font-size: 2.4rem;
-    }
-
-    .newsletter input[type=email] {
-        height: 38px;
-        width: 320px;
-    }
-
-    .cookies {
-        height: 330px;
-        width: 330px;
-    }
-}
-
-/* Tela extra grande */ 
-@media screen and (min-width: 992px) {
-    .oculto-gg {
-        display: none !important;
-    }
-
-    .banner {
-        background-image: url(../img/banner.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        display: flex;
-        align-items: flex-end;
-        height: 400px;
-    }
 }

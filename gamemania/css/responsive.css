@@ -1,0 +1,740 @@
+/* Tela pequenininha */
+@media screen and (max-width: 447.98px) {
+    .oculto-pp {
+        display: none !important;
+    }
+
+    .margem-topo {
+        margin-top: 8px;
+    }
+
+    body {
+        font-size: 12px;
+        background-image: url(../img/banner-320.jpg);
+        background-repeat: no-repeat;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 12px 0 12px;
+    }
+
+    header {
+        height: 120px;
+        position: relative;
+    }
+
+    button {
+        width: 130px;
+        height: 38px;
+        font-size: .8rem;
+    }
+
+    .logo i, .logo span, .menu-m i {
+        font-size: 1.4rem;
+        color: #fff;
+    }
+
+    .banner {
+        background-image: none;
+        display: inline;
+    }
+
+    .banner-texto {
+        display: none !important;
+    }
+
+    .banner-textinho {
+        height: 70px;
+        width: 60%;
+    }
+
+    .banner-textinho a {
+        color: #fff;
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 1.8rem;
+    }
+
+    #titulo-produtos {
+        margin-top: 80px;
+    }
+
+    .produtos {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: start !important;
+        gap: 12px;
+        margin-bottom: 72px;
+    }
+    
+    .produtos p {
+        line-height: 1.1rem;
+    }
+
+    .produto {
+        display: inline;
+        width: 100%;
+    }
+
+    .produto a {
+        display: flex;
+        gap: 12px;
+    }
+    
+    .produto img {
+        object-fit: cover;
+        object-position: center;
+        height: 100px;
+        width: 100px;
+        border-radius: 6px;
+    }
+    
+    .produto a:hover {
+        color: #666;
+        filter: brightness(105%);
+    }
+
+    .produto-comprar {
+        display: none !important;
+    }
+
+    .menu-mobile {
+        height: 60px;
+        width: 100%;
+        background-color: #5ACFDA;
+        font-size: 1.4rem;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 12px;
+    }
+
+    .menu-mobile i {
+        color: #fff;
+    }
+
+    .busca-mobile {
+        padding: 12px;
+        margin-top: 12px;
+    }
+
+    .busca-mobile input[type=text] {
+        width: 70%;
+        height: 38px;
+        font-size: .8rem;
+        border: solid 1px #5ACFDA;
+        border-radius: 6px 0 0 6px;
+        padding-left: 10px;
+        caret-color: #5ACFDA;
+    }
+    
+    .busca-mobile input[type=text]:focus {
+        border: solid 2px #5ACFDA;
+    }
+    
+    .busca-mobile button {
+        width: 50px;
+        font-size: .8rem;
+        border-radius: 0 6px 6px 0;
+    }
+
+    .cookies {
+        height: 300px;
+        width: 93%;
+        left: 12px;
+        bottom: 12px;
+        padding: 12px;
+    }
+
+    .generico {
+        text-align: center;
+        margin: 120px 0 0 0;
+    }
+
+    .detalhe-produto {
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        margin-bottom: 72px;
+    }
+
+    .detalhe-produto h2 {
+        margin-top: 60vw;
+    }
+
+    .detalhe-produto img {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        object-position: center;
+        width: 100vw;
+        height: 100vw;
+        border-radius: unset;
+    }
+
+    .detalhe-produto strong {
+        color: #5ACFDA;
+        font-size: 1rem;
+    }
+
+    .detalhe-produto div p:nth-child(3){
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 90vw;
+    }
+
+    .botao-sacola {
+        width: 160px;
+    }
+
+    .botao-favorito {
+        width: 50px;
+    }
+
+    .cadastro {
+        margin-bottom: 72px;
+    }
+
+    .cadastro div {
+        width: 100%;
+    }
+
+    .cadastro input[type=text], input[type=password], input[type=email] {
+        width: 100%;
+        height: 38px;
+        font-size: .8rem;
+    }
+
+    .carrinho  {
+        flex-direction: column-reverse;
+        gap: 12px;
+        margin: 24px 0 72px 0;
+    }
+    
+    .carrinho div {
+        flex-grow: 1;
+    }
+    
+    .carrinho a {
+        color: #ababab;
+        font-size: 13px;
+        cursor: pointer;
+    }
+    
+    .carrinho img {
+        height: 100px;
+        width: 100px;
+        margin-right: 12px;
+        border-radius: 6px;
+    }
+    
+    .carrinho div div p:last-child{
+        bottom: 0;
+        left: 112px;
+        color: #5ACFDA;
+    }
+
+    .carrinho button {
+        width: 150px;
+    }
+
+    .promocao {
+        width: 100%;
+    }
+
+    .cabecalho-busca {
+        display: block;
+    }
+    
+    .cabecalho-busca div:last-child{
+        text-align: left;
+    }
+    
+    .resultado-busca {
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 72px;
+    }
+    
+    .resultado-busca div {
+        width: 100%;
+        height: 150px;
+        position: unset;
+        padding: 0;
+    }
+    
+    .resultado-busca p {
+        position: unset;
+        bottom: unset;
+        font-size: 1rem;
+    }
+    
+    .resultado-busca img {
+        height: 150px;
+        width: 100%;
+    }
+
+    .falecom {
+        margin: 80px 0 72px 0;
+    }
+
+    .falecom input, textarea {
+        width: 300px;
+        font-size: .8rem;
+    }
+    
+    .falecom input {
+        height: 40px;
+    }
+    
+    .falecom textarea {
+        height: 80px;
+    }
+
+    .generico {
+        margin: 120px 60px 0 60px;
+    }
+    
+    .generico i {
+        font-size: 3rem;
+    }
+}
+
+/* Tela pequena */
+@media screen and (min-width: 448px) and (max-width: 575.98px){
+    .oculto-p {
+        display: none !important;
+    }
+
+    .margem-topo {
+        margin-top: 12px;
+    }
+
+    body {
+        font-size: 12px;
+        background-image: url(../img/banner-576.jpg);
+        background-repeat: no-repeat;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 20px 0 20px;
+    }
+
+    header {
+        height: 150px;
+        position: relative;
+        background-color: #5ACFDA;
+    }
+
+    button {
+        width: 130px;
+        height: 38px;
+        font-size: .8rem;
+    }
+
+    .menu-m {
+        font-size: 1.4rem;
+    }
+
+    .logo i, .logo span, .menu-m i {
+        color: #fff;
+    }
+
+    .banner {
+        background-image: none;
+        display: inline;
+    }
+
+    .banner-texto {
+        display: none !important;
+    }
+
+    .banner-textinho {
+        height: 100px;
+        width: 50%;
+    }
+
+    .banner-textinho a {
+        color: #fff;
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 1.8rem;
+    }
+
+    .produtos p {
+        line-height: 1.1rem;
+    }
+
+    .produto {
+        width: 28%;
+        min-width: 120px;
+    }
+
+    .produto img {
+        height: 82px;
+    }
+
+    .direitos {
+        font-size: .7rem;
+    }
+
+    .redes-sociais i, .formas-pagamento i {
+        font-size: 1.1rem;
+    }
+
+    .cookies {
+        height: 300px;
+        width: 300px;
+    }
+
+    .menu-responsivo {
+        width: 70%;
+    }
+
+    .detalhe-produto img {
+        height: 180px;
+        width: 180px;
+    }
+
+    .carrinho div div {
+        display: flex;
+        justify-content: flex-start;
+        position: unset;
+    }
+    
+    .carrinho div div p:last-child{
+        position: relative;
+        margin-left: 24px;
+    }
+
+    .cadastro input[type=text], input[type=password], input[type=email] {
+        width: 400px;
+        height: 40px;
+        font-size: .8rem;
+    }
+
+    .falecom input, textarea {
+        width: 400px;
+        font-size: .8rem;
+    }
+    
+    .falecom input {
+        height: 40px;
+    }
+    
+    .falecom textarea {
+        height: 120px;
+    }
+
+    .generico {
+        margin: 60px 100px 60px 100px;
+    }
+    
+    .generico i {
+        font-size: 3rem;
+    }
+}
+
+/* Tela média */
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+    .oculto-m {
+        display: none !important;
+    }
+
+    .margem-topo {
+        margin-top: 12px;
+    }
+
+    body {
+        font-size: 13px;
+        background-image: url(../img/banner-768.jpg);
+        background-repeat: no-repeat;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 20px 0 20px;
+    }
+
+    header {
+        height: 120px;
+        position: relative;
+        background-color: #5ACFDA;
+    }
+
+    button {
+        width: 130px;
+        height: 38px;
+        font-size: .8rem;
+    }
+
+    .menu-m {
+        font-size: 1.4rem;
+    }
+
+    .logo i, .logo span, .menu-m i, .beneficios, .beneficios i {
+        color: #fff;
+    }
+
+    .banner {
+        background-image: none;
+        display: inline;
+    }
+
+    .banner-texto {
+        width: 48%;
+    }
+
+    .banner-texto a {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    .beneficios {
+        font-size: .7rem;
+    }
+
+    .categorias {
+        height: 180px;
+    }
+
+    .card {
+        height: 120px;
+    }
+
+    .ofertas {
+        gap: 12px;
+    }
+
+    .oferta p {
+        font-size: 1.1rem;
+    }
+
+    .produto {
+        width: 30%;
+    }
+
+    .produto img {
+        height: 120px;
+    }
+
+    .direitos {
+        font-size: .7rem;
+    }
+
+    .redes-sociais i, .formas-pagamento i {
+        font-size: 1.1rem;
+    }
+
+    .cookies {
+        height: 330px;
+        width: 330px;
+    }
+
+    .menu-responsivo {
+        width: 56%;
+    }
+
+    .detalhe-produto img {
+        height: 240px;
+        width: 240px;
+    }
+
+    .carrinho div div {
+        display: flex;
+        justify-content: flex-start;
+        position: unset;
+    }
+    
+    .carrinho div div p:last-child{
+        position: relative;
+        margin-left: 24px;
+    }
+
+    .cadastro input[type=text], input[type=password], input[type=email] {
+        width: 400px;
+        height: 40px;
+        font-size: .8rem;
+    }
+
+    .falecom input, textarea {
+        width: 400px;
+        font-size: .8rem;
+    }
+    
+    .falecom input {
+        height: 40px;
+    }
+    
+    .falecom textarea {
+        height: 120px;
+    }
+}
+
+/* Tela grande */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .oculto-g {
+        display: none !important;
+    }
+   
+    .margem-topo {
+        margin-top: 12px;
+    }
+
+    body {
+        font-size: 14px;
+        background-image: url(../img/banner-992.jpg);
+        background-repeat: no-repeat;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 40px 0 40px;
+    }
+
+    header {
+        position: relative;
+        background-color: #5ACFDA;
+    }
+
+    nav a:hover {
+        color: #fff;
+    }
+    
+    nav a.atual:link, a.atual:visited {
+        color: #fff;
+        font-weight: bold;
+    }
+
+    button {
+        width: 130px;
+        height: 38px;
+        font-size: .8rem;
+    }
+
+    .menu-g {
+        width: 60%;
+        position: absolute;
+        top: 30px;
+        left: 20%;
+    }
+
+    .menu-g a, .logo i, .minha-conta i, .beneficios, .beneficios i {
+        color: #fff;
+    }
+
+    .banner {
+        background-image: none;
+        display: inline;
+    }
+
+    .banner-texto {
+        width: 40%;
+    }
+
+    .banner-texto a {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    .beneficios {
+        font-size: .7rem;
+    }
+
+    .ofertas {
+        gap: 12px;
+    }
+
+    .oferta p {
+        font-size: 1.1rem;
+    }
+
+    .produto img {
+        height: 150px;
+    }
+
+    .newsletter {
+        height: 130px;
+        font-size: 1.1rem;
+    }
+
+    .newsletter i {
+        font-size: 2.4rem;
+    }
+
+    .newsletter input[type=email] {
+        height: 38px;
+        width: 320px;
+    }
+
+    .cookies {
+        height: 330px;
+        width: 330px;
+    }
+
+    .carrinho-quantidade {
+        background-color: #fff;
+        color: #5ACFDA;
+    }
+    
+    .favoritos-quantidade {
+        background-color: #fff;
+        color: #5ACFDA;
+    }
+
+    .detalhe-produto img {
+        height: 360px;
+        width: 360px;
+    }
+
+    .carrinho div div {
+        display: flex;
+        justify-content: flex-start;
+        position: unset;
+    }
+    
+    .carrinho div div p:last-child{
+        position: relative;
+        margin-left: 24px;
+    }
+}
+
+/* Tela extra grande */ 
+@media screen and (min-width: 992px) {
+    .oculto-gg {
+        display: none !important;
+    }
+
+    .banner {
+        background-image: url(../img/banner.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        align-items: flex-end;
+        height: 400px;
+    }
+}

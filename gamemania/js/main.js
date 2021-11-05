@@ -11,6 +11,14 @@ $(document).ready(function () {
         aceitarCookies();
     });
 
+    // oculta o menu responsivo caso a tela seja aumentada com ele aberto
+    $(window).resize(function() {
+        if ($(window).width() >= 768) {
+            $("nav").removeClass("menu-responsivo");
+        } else {
+            $("nav").addClass("menu-responsivo");
+        }}).resize();
+
     // atualiza quantidade de itens no carrinho
     if (carrinho.total > 0) {
         $(".carrinho-quantidade span").text(carrinho.total);
@@ -48,8 +56,24 @@ function exibirCookies() {
     }
 }
 
+function exibirMenuResponsivo() {
+    $("nav").removeClass("oculto-pp oculto-p oculto-m").addClass("menu-responsivo");
+    $(".menu-responsivo-fechar").removeClass("oculto-pp oculto-p oculto-m");
+}
+
+function ocultarMenuResponsivo() {
+    $("nav").removeClass("menu-responsivo").addClass("oculto-pp oculto-p oculto-m");
+    $(".menu-responsivo-fechar").addClass("oculto-pp oculto-p oculto-m");
+}
+
 function buscar() {
     let busca = $("#busca").val();
+    localStorage.setItem("busca", busca);
+    window.location.href = "busca.html";
+}
+
+function buscarVersaoMobile() {
+    let busca = $("#busca-mobile").val();
     localStorage.setItem("busca", busca);
     window.location.href = "busca.html";
 }
@@ -135,7 +159,7 @@ function renderizarFavoritos(selecionados) {
             Meus favoritos
         </h2>`;
 
-    if (selecionados.length > 0){
+    if (selecionados.length > 0) {
         for (let produto of selecionados) {
             template += `
             <div class="margem-topo">
@@ -167,7 +191,7 @@ function renderizarCarrinho(selecionados) {
             Minha cesta de compras
         </h2>`;
 
-    if (selecionados.length > 0){
+    if (selecionados.length > 0) {
         for (let produto of selecionados) {
             template += `
             <div class="margem-topo">
@@ -189,7 +213,7 @@ function renderizarCarrinho(selecionados) {
 
     template += `
         <p class="margem-topo">&nbsp;</p>
-        <a href="index.html" class="carrinho-voltar">
+        <a href="index.html" class="carrinho-voltar oculto-pp">
             <i class="far fa-arrow-left"></i> continuar comprando
         </a>
         <button>
@@ -310,7 +334,10 @@ function renderizarRelacionados(produto, relacionados) {
 }
 
 function renderizarBuscados() {
-    let busca = localStorage.getItem("busca").toLowerCase();
+    let busca = localStorage.getItem("busca");
+
+    busca = busca != null ? busca.toLowerCase() : "";
+
     let buscados = produtos.filter(p =>
         p.titulo.toLowerCase().indexOf(busca) >= 0 ||
         p.descricao.toLowerCase().indexOf(busca) >= 0);
