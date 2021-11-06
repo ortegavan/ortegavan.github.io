@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <p>Serviço ativo</p>
+            <p>
+                <img src="img/servico-ativo.png"  alt="Serviço ativo" class="status-servico">
+            </p>
+        </div>
+        <div>
+            <p>
+                <span class="legenda legenda-verde"></span>Requests ok 
+                <span class="legenda legenda-amarela"></span>Requests com erro
+                <span class="legenda legenda-vermelha"></span>Requests lentos
+            </p>
+            <p>
+                <img src="img/grafico.png" alt="Gráfico" class="grafico">
+            </p>
+        </div>
+        <div>
+           <p>Hora atual</p>
+           <p class="numero">09:49:10</p>
+           <p>serviço online desde</p>
+           <p class="numero verde">20/10 13:20</p>
+        </div>
+        <div>
+            <p>Tempo médio dos requests</p>
+            <p class="numero">12 ms</p>
+            <p class="min-max">
+                <span>mínimo</span>
+                <span>máximo</span>
+            </p>
+            <p class="min-max">
+                <span class="numero verde">1 ms</span>
+                <span class="numero vermelho">123456 ms</span>
+            </p>
+        </div>
+        <div>
+            <p>Requests por cliente</p>
+            <p class="min-max">
+                <span>
+                    <img src="img/servidor.png" alt="Servidor">
+                    Server01
+                </span>
+                <span class="numero">1234</span>
+            </p>
+            <p class="min-max">
+                <span>
+                    <img src="img/servidor.png" alt="Servidor">
+                    Server02
+                </span>
+                <span class="numero">12345</span>
+            </p>
+            <p class="min-max">
+                <span>
+                    <img src="img/servidor.png" alt="Servidor">
+                    Server03
+                </span>
+                <span class="numero">123456</span>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
