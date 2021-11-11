@@ -1,0 +1,18 @@
+/* Footer */
+footer div {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer div div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.direitos {
+    background-color: #5acfda;
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 24px;
+}

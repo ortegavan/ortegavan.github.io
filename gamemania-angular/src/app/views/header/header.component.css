@@ -1,0 +1,63 @@
+/* Topo: logo + menu */
+header {
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+}
+
+nav i {
+    font-size: 1.3rem;
+}
+
+.logo {
+    font-family: "Urbanist", sans-serif;
+    font-size: 1.8rem;
+}
+
+.logo i {
+    margin-right: 10px;
+}
+
+/* Menu responsivo */
+.menu-responsivo {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    height: 100vh;
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(6px);
+    font-size: 1rem;
+    padding: 60px;
+    margin-top: 50px;
+}
+
+.menu-responsivo-fechar {
+    position: fixed;
+    top: 50px;
+    right: 30px;
+    z-index: 3;
+}
+
+.menu-responsivo-abrir i,
+.menu-responsivo-fechar i {
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width: 447.98px) {
+    .menu-responsivo {
+        width: 80%;
+    }
+}

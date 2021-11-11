@@ -1,0 +1,22 @@
+/* Benefícios */
+.beneficios {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+}
+
+.beneficios div {
+    display: flex;
+}
+
+.beneficios i {
+    font-size: 1.6rem;
+    margin-right: 10px;
+    color: #5acfda;
+    align-self: center;
+}
+
+.beneficios strong {
+    text-transform: uppercase;
+}

@@ -1,0 +1,58 @@
+/* Banner */
+.banner {
+    background-image: url(/assets/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    height: 400px;
+}
+
+.banner-texto {
+    margin-bottom: 40px;
+    width: 32%;
+}
+
+.banner-texto a {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* A partir daqui: ajustes responsivos */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .banner-texto {
+        margin-bottom: 30px;
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+    .banner-texto {
+        margin-bottom: 20px;
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 448px) and (max-width: 575.98px) {
+    .banner-texto {
+        margin-bottom: 20px;
+        width: 60%;
+    }
+
+    .banner-texto a {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 447.98px) {
+    .banner-texto {
+        margin-bottom: 20px;
+        width: 80%;
+    }
+
+    .banner-texto a {
+        font-size: 1.3rem;
+    }
+}

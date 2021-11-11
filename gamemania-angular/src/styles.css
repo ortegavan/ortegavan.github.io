@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Urbanist:wght@500&display=swap");
+
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a.atual {
+    color: #5acfda;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #5acfda;
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: normal;
+    padding: 12px 0 12px 0;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    background-color: #5acfda;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #70e2ed;
+}
+
+input,
+textarea {
+    font-family: "Montserrat", sans-serif;
+    color: #999;
+}
+
+::placeholder {
+    font-family: "Montserrat", sans-serif;
+    color: #ccc;
+}
+
+.turquesa {
+    color: #5acfda;
+}
+
+.container {
+    width: 94%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.margem-topo {
+    margin-top: 30px;
+}
+
+.fad {
+    --fa-secondary-opacity: 1;
+    --fa-primary-color: #666;
+    --fa-secondary-color: #5acfda;
+}
+
+/* A partir daqui: ajustes responsivos */
+@media screen and (min-width: 992px) {
+    .oculto-gg {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .oculto-g {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+    .oculto-m {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 448px) and (max-width: 575.98px) {
+    .oculto-p {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 447.98px) {
+    .oculto-pp {
+        display: none !important;
+    }
+
+    .menu-responsivo {
+        width: 80%;
+    }
+}
