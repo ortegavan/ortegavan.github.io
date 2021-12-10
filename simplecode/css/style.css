@@ -95,6 +95,8 @@ nav {
     color: #FFFFFF;
     background: url(../img/001.jpg) no-repeat left top;
     background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     display: flex;
     justify-content: flex-end;
     align-items: center;
