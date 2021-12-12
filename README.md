@@ -16,7 +16,7 @@
 	Este repositório contém a publicação do meu portfolio (em construção) e de testes de projetos conforme lista a seguir:
 </p>
 
-* Portfolio (ainda em construção): [https://ortegavan.github.io](https://ortegavan.github.io)
+* Portfolio: [https://ortegavan.github.io](https://ortegavan.github.io)
 * SimpleCode (site da consultoria): [https://ortegavan.github.io/simplecode](https://ortegavan.github.io/simplecode/index.html)
 * GameMania (projeto do curso de desenvolvedor full stack do SENAI - SP): [https://ortegavan.github.io/gamemania](https://ortegavan.github.io/gamemania/)
 * Dashboard (painel feito para um cliente consultar o status de consumo de sua API): [https://ortegavan.github.io/dashboard](https://ortegavan.github.io/dashboard/)
