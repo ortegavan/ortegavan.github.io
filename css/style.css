@@ -49,6 +49,10 @@ a {
     text-decoration: none;
 }
 
+.oculto {
+    display: none !important;
+}
+
 .container {
     max-width: 1440px;
     width: 80%;
@@ -72,6 +76,10 @@ nav {
     justify-content: center;
 }
 
+.texto-metade {
+    width: 50%;
+}
+
 .social {
     height: 8vh;
     display: flex;
@@ -86,13 +94,7 @@ nav {
     font-size: 24px;
 }
 
-.dribbble {
-    width: 82px;
-    height: 20px;
-}
-
-.github {
-    width: 74.44px;
+.social img {
     height: 20px;
 }
 
@@ -159,8 +161,8 @@ nav {
 }
 
 footer {
-    height: 260px;
-    background-color: #EAEAEA;
+    height: 270px;
+    background-color: #E5EBF0;
 }
 
 footer i {
@@ -183,4 +185,193 @@ footer i {
     display: flex;
     flex-direction: column;
     line-height: 42px;
+}
+
+.portfolio {
+    margin: 36px 0 36px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 52px;
+    justify-content: flex-start;
+}
+
+.imagem-inteira img {
+    width: 100%;
+}
+
+.imagem-metade img {
+    width: 48%;
+}
+
+.menu-responsivo-gatilho, .social-icones {
+    display: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 32px;
+    }
+
+    .texto-metade {
+        width: 70%;
+    }
+
+    .direita {
+        text-align: left;
+    }
+
+    .imagem-home img {
+        width: 100%;
+    }
+
+    .expertise {
+        height: 260px;
+    }
+
+    .expertise div {
+        padding: 10px;
+    }
+
+    .expertise p, .sobre p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .sobre {
+        gap: 30px;
+    }
+
+    .sobre img {
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+    }
+
+    .portfolio {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .oculto-p {
+        display: none !important;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .margem-topo {
+        margin-top: 40px;
+    }
+
+    .texto-metade {
+        width: 100%;
+    }
+
+    .direita {
+        text-align: left;
+    }
+
+    .imagem-home img {
+        width: 100%;
+    }
+
+    .expertise {
+        height: 420px;
+    }
+
+    .expertise div {
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+
+    .expertise div div {
+        width: 48%;
+    }
+
+    .expertise p, .sobre p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .sobre {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .sobre div:first-of-type {
+        order: 2;
+    }
+
+    .sobre div:last-of-type {
+        order: 1;
+    }
+
+    .sobre img {
+        width: 120px;
+        height: 120px;
+        border-radius: 60px;
+    }
+
+    .menu-responsivo {
+        flex-direction: column;
+        gap: 12px;
+        position: absolute;
+        top: 10vh;
+        right: 36px;
+        background-color: #E5EBF0;
+        padding: 40px;
+        border-radius: 10px;
+    }
+
+    .menu-responsivo-gatilho {
+        display: inline-block;
+        text-align: right;
+    }
+
+    .menu-responsivo-gatilho i {
+        font-size: 24px;
+    }
+
+    .social-logos {
+        display: none !important;
+    }
+
+    .social-icones {
+        display: inline-block;
+    }
+
+    footer {
+        height: 150px;
+    }
+
+    .rodape div:last-of-type {
+        font-size: 12px;
+    }
+
+    .rodape-menu {
+        display: none !important;
+    }
+
+    .portfolio {
+        gap: 10px;
+    }
+
+    .imagem-metade img {
+        width: 100%;
+    }
 }
