@@ -30,7 +30,7 @@ p {
 }
 
 header {
-    height: 16vh;
+    height: 14vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -216,6 +216,15 @@ footer i {
         font-size: 32px;
     }
 
+    .principal {
+        height: 70vh;
+    }
+
+    .logo img {
+        width: 90px;
+        height: 100%;
+    }
+
     .texto-metade {
         width: 70%;
     }
@@ -271,6 +280,15 @@ footer i {
 
     h3 {
         font-size: 18px;
+    }
+
+    .logo img {
+        width: 78px;
+        height: 100%;
+    }
+
+    .principal {
+        height: 73vh;
     }
 
     .margem-topo {
