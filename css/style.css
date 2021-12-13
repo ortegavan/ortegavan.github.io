@@ -12,6 +12,7 @@ body {
     color: #000000;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
+    margin-top: 10px;
 }
 
 h2 {
@@ -283,7 +284,8 @@ footer i {
     }
 
     .logo img {
-        width: 78px;
+        max-width: 13.96vh;
+        width: 72px;
         height: 100%;
     }
 
