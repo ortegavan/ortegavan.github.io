@@ -9,19 +9,20 @@
 
 body {
     background-color: #FFFFFF;
-    color: #000000;
+    color: #6c6d7f;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    margin-top: 10px;
 }
 
 h2 {
+    color: #2b2e4a;
     font-family: 'Playfair Display', serif;
     font-size: 52px;
     margin: 20px 0 20px 0;
 }
 
 h3 {
+    color: #2b2e4a;
     font-family: 'Playfair Display', serif;
     font-size: 36px;
 }
@@ -31,7 +32,7 @@ p {
 }
 
 header {
-    height: 14vh;
+    height: 12vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,12 +47,16 @@ header nav {
 }
 
 a {
-    color: #000000;
+    color: #2b2e4a;
     text-decoration: none;
 }
 
 .oculto {
     display: none !important;
+}
+
+.fundo-cinza {
+    background-color: #f2f2f2;
 }
 
 .container {
@@ -71,7 +76,7 @@ nav {
 }
 
 .principal {
-    height: 76vh;
+    height: 68vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,7 +87,7 @@ nav {
 }
 
 .social {
-    height: 8vh;
+    height: 10vh;
     display: flex;
 }
 
@@ -92,6 +97,7 @@ nav {
 }
 
 .social i {
+    color: #2b2e4a;
     font-size: 24px;
 }
 
@@ -104,7 +110,7 @@ nav {
 }
 
 .cinzinha {
-    color: #999999;
+    color: #9e9fad;
 }
 
 .imagem-home {
@@ -128,7 +134,11 @@ nav {
 
 .expertise {
     height: 300px;
-    background-color: #000000;
+    background-color: #2b2e4a;
+    color: #FFFFFF;
+}
+
+.expertise h2 {
     color: #FFFFFF;
 }
 
@@ -163,7 +173,6 @@ nav {
 
 footer {
     height: 270px;
-    background-color: #E5EBF0;
 }
 
 footer i {
