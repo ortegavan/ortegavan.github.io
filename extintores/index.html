@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="ext.css">
+    <script src="https://kit.fontawesome.com/e12642acd8.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="ext.js" defer></script>
+
+    <title>Extintores</title>
+</head>
+
+<header>
+    <div class="header">
+
+        <h2>Meu Nome</h2>
+        <i id="iconMenu" class="fas fa-bars" onclick="iconMenu()"></i>
+    </div>
+</header>
+
+<body>
+    <!-- MODAL DO MENU  -->
+    <div class="modalMenu">
+        <i class="fas fa-times" onclick="closeIconMenu()"></i>
+
+        <ul>
+            <li>Pesquisar Extintor</li>
+            <li onclick="addExtintor()">Adicionar Extintor</li>
+        </ul>
+        
+    </div>
+
+    <div id="containerCards" class="containerCards">
+    </div>
+
+    <div class="tabelaScroll" style="display: none;">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Numero</th>
+                    <th>Agente extintor</th>
+                    <th>Classe</th>
+                    <th>Pavimento</th>
+                    <th>Última Recarga</th>
+                    <th>Próxima Recarga</th>
+                    <th>Último Reteste</th>
+                    <th>Próximo Reteste</th>
+                    <th>Sinalização</th>
+                    <th>Avarias</th>
+                </tr>
+            </thead>
+            <tbody data-tabela>
+            </tbody>
+
+        </table>
+
+
+    </div>
+
+    <div class="modalExtFull">
+
+        <div class="extCardDetalhe">
+
+
+            <h1 id="extintorNumero"></h1>
+
+            <form id="extFull">
+                <div class="formRow">
+                    <div class="formCol">
+                        <div>
+                            <label for="numeroExtintor">Número</label>
+                            <input disabled type="number" id="numeroExtintor">
+                        </div>
+                        <div>
+                            <label for="tipo">Tipo</label>
+                            <select disabled id="tipo">
+                                <option value="0">AP</option>
+                                <option value="1">CO²</option>
+                                <option value="2">PQS</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="classe">Classe</label>
+                            <input type="text" id="classe" disabled>
+                        </div>
+                        <div>
+                            <label for="local">Localização</label>
+                            <input disabled type="text" id="local" >
+                        </div>
+                    </div>
+                    <div class="formCol">
+                        <div>
+                            <label for="ultRec">Última Recarga</label>
+                            <input disabled type="date" id="ultRec">
+                        </div>
+                        <div>
+                            <label for="proxRec">Próxima Recarga</label>
+                            <input type="date" id="proxRec" disabled>
+                        </div>
+                        <div>
+                            <label for="ultRet">Último Reteste</label>
+                            <input disabled type="date" id="ultRet">
+                        </div>
+                        <div>
+                            <label for="proxRet">Próximo Reteste</label>
+                            <input type="date" id="proxRet" disabled>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formAvarias">
+                    <div>
+                        <label for="sinalizacao">Sinalização</label>
+                        <select disabled id="sinalizacao">
+                            <option value="0">Ok</option>
+                            <option value="1">Avariado</option>
+                        </select>
+                    </div>
+                    <div>
+
+                        <label for="avaria">Avaria</label>
+                        <textarea disabled form="extFull" maxlength="200" id="avaria"></textarea>
+                    </div>
+                </div>
+
+                <div id="defaultBtn" class="formRow formBtn">
+                    <button type="button" onclick="formEdit('#editBtn', '#defaultBtn')"><i class="far fa-edit "></i>
+                        Editar</button>
+                    <button type="reset" onclick="closeModal()"><i class="fas fa-times"></i> Fechar</button>
+                    <button type="reset"><i class="far fa-trash-alt"></i> Excluir</button>
+                </div>
+                <div id="editBtn" class="formRow formBtn innactive">
+                    <button type="button" onclick="formEdit('#defaultBtn', '#editBtn')"><i class="fas fa-arrow-left"></i>
+                        Cancelar</button>
+                    <button type="submit" onclick="criarExtintor()"><i class="far fa-save"></i> Salvar</button>
+                </div>
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+</body>
+<script src="service/ext-service.js"></script>
+
+</html>
