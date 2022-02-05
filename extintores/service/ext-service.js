@@ -1,4 +1,6 @@
-// criarExtintor2();
+var apiExtintores = "https://controleextintores.azurewebsites.net/extintor/";
+
+criarExtintor2();
 
 const criarNovaLinha = (codigo, numero, tipo, classe, codigoSubLocal, ultimaRecarga, proximaRecarga, ultimoReteste, proximoReteste, sinalizacao, avarias) => {
     const linhaNova = document.createElement('tr')
@@ -44,7 +46,7 @@ const containerCards = document.querySelector('.containerCards')
 
 const http = new XMLHttpRequest()
 
-http.open('GET', 'http://ortegavan-001-site1.itempurl.com/extintor/')
+http.open('GET', apiExtintores)
 
 http.send()
 
@@ -89,7 +91,7 @@ function horus(codigo) {
     // let array = document.getElementsByTagName('h2')
     // console.log(array.innerHTML)
 
-    http.open('GET', 'http://ortegavan-001-site1.itempurl.com/extintor/' + codigo)
+    http.open('GET', apiExtintores + codigo)
     http.send()
     http.onload = () => {
         const data = JSON.parse(http.response)
@@ -222,7 +224,7 @@ function criarExtintor() {
     }
 
     console.log(newExt)
-    xhr.open("POST", "http://ortegavan-001-site1.itempurl.com/extintor/", true)
+    xhr.open("POST", apiExtintores, true)
     xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8")
     xhr.send(JSON.stringify(newExt))
 }
@@ -241,7 +243,7 @@ function criarExtintor2() {
         "sinalizacao": 0
     };
 
-    fetch("http://ortegavan-001-site1.itempurl.com/extintor", {
+    fetch(apiExtintores, {
         method: "POST",
         mode: "cors",
         headers: {
