@@ -1,6 +1,6 @@
 var apiExtintores = "https://controleextintores.azurewebsites.net/extintor/";
 
-criarExtintor2();
+//criarExtintor2();
 
 const criarNovaLinha = (codigo, numero, tipo, classe, codigoSubLocal, ultimaRecarga, proximaRecarga, ultimoReteste, proximoReteste, sinalizacao, avarias) => {
     const linhaNova = document.createElement('tr')
