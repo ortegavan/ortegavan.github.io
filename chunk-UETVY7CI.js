@@ -1,0 +1,1 @@
+import{Cb as s,Na as n,ib as o,jb as c}from"./chunk-NMSGTUAE.js";var a=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-user-account"]],decls:2,vars:0,template:function(e,p){e&1&&(o(0,"p"),s(1,"user-account works!"),c())},encapsulation:2})};export{a as UserAccountComponent};

@@ -1,0 +1,1 @@
+import{Cb as i,Na as n,ib as p,jb as o}from"./chunk-NMSGTUAE.js";var s=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-my-recipes"]],decls:2,vars:0,template:function(e,m){e&1&&(p(0,"p"),i(1,"my-recipes works!"),o())},encapsulation:2})};export{s as MyRecipesComponent};

@@ -1,0 +1,1 @@
+import{Cb as i,Na as o,ib as n,jb as a}from"./chunk-NMSGTUAE.js";var s=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=o({type:t,selectors:[["app-favorites"]],decls:2,vars:0,template:function(e,p){e&1&&(n(0,"p"),i(1,"favorites works!"),a())},encapsulation:2})};export{s as FavoritesComponent};
